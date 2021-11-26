@@ -41,33 +41,33 @@ for idx, val in enumerate(ops):
         sum=ops[0]
   # if length is greater than one then you can carry on the other part.
   
-   step 1. check if value is int if true append to our newops list.
+  #  step 1. check if value is int if true append to our newops list.
      else:
         if type(val) == int:
             newops.append(val)
-   step 2 . check if value is C if so remove the last value in our newops list.
+   # step 2 . check if value is C if so remove the last value in our newops list.
         if val == "C":
             newops.pop()
-   step 3 . check if value is D if so take the last value in our newops list ans double it and append it in the newops list but you have also to check if length of our newops             list is zero
+   # step 3 . check if value is D if so take the last value in our newops list ans double it and append it in the newops list but you have also to check if length of our newops             list is zero
         if val == "D":
             if len(newops)==0:
                 pass
             else:
                 score = (newops[-1])*2
                 newops.append(score)
-   Step 4 . check if our value is + if so check first id the length of our newops list is less than 2. then take the last two values in the newops list and sum then and the               outcome append it to the newops list
+ #  Step 4 . check if our value is + if so check first id the length of our newops list is less than 2. then take the last two values in the newops list and sum then and the               outcome append it to the newops list
         if val == "+":
             if len(newops)<2:
                 pass
             else:
                 score = newops[-1]+newops[-2]
                 newops.append(score)
-   step 5 . add the values of our list to the the total value.
+ #  step 5 . add the values of our list to the the total value.
         sum = 0
         for ele in range(0, len(newops)):
             sum = sum + newops[ele]
 
-print(sum)
+         print(sum)
 
 
 ## This is my only view of this problem ## I welcome ideas kindly raise any issues i am available to harder
